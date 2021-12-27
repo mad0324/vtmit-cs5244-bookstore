@@ -1,0 +1,1842 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/MichaelBookstoreTransact/api/categories
+Accept: application/json
+
+###
+
+# Pass
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Name: Null
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": null,
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Name: Empty
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Name: Short
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Elo",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Name: Long
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "EloiseEloiseEloiseEloiseEloiseEloiseEloiseEloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Address: Null
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": null,
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Address: Empty
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Address: Short
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Address: Long
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main123 Main123 Main123 Main123 Main123 Main123 Main123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Phone: Null
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": null,
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Phone: Empty
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Phone: Length 1
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "80055555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Phone: Length 2
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "800555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Phone: Length 3
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "800-555-55555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Valid Phone: Length 1
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "800-555-5555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Valid Phone: Length 2
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "(800) 555-5555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Valid Phone: Length 3
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "800    555555-5 )()()(",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Email: Null
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": null,
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Email: Empty
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Email: Spaces
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@ema il.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Email: No @
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloiseemail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Email: Last character .
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Email: tom@
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "tom@",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid CCN: Null
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": null,
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid CCN: Empty
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid CCN: Short
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444-333-222-111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid CCN: Long
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111 9",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Valid CCN: Long
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444-3333-2222-1111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Valid CCN: 14
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "44443333222211",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Valid CCN: 16
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Date: Null Month
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": null,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Date: Null Year
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": null
+  }
+}
+
+###
+
+# Invalid Date: Empty Year
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": ""
+  }
+}
+
+###
+
+# Invalid Date: Past Month
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2021"
+  }
+}
+
+###
+
+# Invalid Date: Past Year
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 9,
+    "ccExpiryYear": "2020"
+  }
+}
+
+###
+
+# Valid Date: Now
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 8,
+    "ccExpiryYear": "2021"
+  }
+}
+
+###
+
+# Invalid Cart: Empty
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": []
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Quantity: Low
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 0
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Quantity: High
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 100
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Price
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1998,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1003
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
+
+# Invalid Category
+POST http://localhost:8080/MichaelBookstoreTransact/api/orders
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:90.0) Gecko/20100101 Firefox/90.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: http://localhost:8081/
+Origin: http://localhost:8081
+Connection: keep-alive
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1014,
+          "title": "A Short History of Nearly Everything",
+          "author": "Bill Bryson",
+          "description": "",
+          "price": 1999,
+          "rating": 0,
+          "isPublic": false,
+          "isFeatured": false,
+          "categoryId": 1002
+        },
+        "quantity": 30
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Eloise",
+    "address": "123 Main",
+    "phone": "8005555555",
+    "email": "eloise@email.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 1,
+    "ccExpiryYear": "2025"
+  }
+}
+
+###
